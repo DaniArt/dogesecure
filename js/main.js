@@ -70,8 +70,6 @@ const updatePlayercount = (ip, port) => {
     $.get(`https://api.bybilly.uk/api/players/${ip}/${port}`, (result) => {
         if (result.hasOwnProperty('online')) {
             $(".sip").html(result.online);
-        } else {
-            $(".playercount").html("Server isn't online!");
-        }
+        } 
     });
 };
